@@ -4,13 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
   <h2>Welcome {{ name }}</h2>
-  <input type="text" #myInput>
+  <input type="text" [(ngModel)]="name">
   <button (click)="logMessage(myInput.value)">Log</button>
   `,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  name = 'Codevolution';
+  name = '';
 
   constructor() {}
 
