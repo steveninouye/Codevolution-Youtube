@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
 
-<div *ngFor="let color of colors; first as f">
+<div *ngFor="let color of colors; last as f">
   <h2>{{f}} {{color}}</h2>
 </div>
 
