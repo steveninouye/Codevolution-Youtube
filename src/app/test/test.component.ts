@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   template: `
 
-<div *ngFor="let color of colors; odd as o">
-  <h2>{{o}} {{color}}</h2>
-</div>
+<h2>{{"Hello " + parentData}}
+</h2>
 
   `,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  colors = ['red', 'yellow', 'green', 'blue'];
+  @Input() public parentData;
 
   constructor() {}
 
