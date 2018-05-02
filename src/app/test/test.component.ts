@@ -3,10 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-test',
   template: `
-  <h2 *ngIf="displayName; else elseBlock">Codevlotion</h2>
-  <ng-template #elseBlock>
-  <h2>Name is hiden</h2>
-  </ng-template>
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+<h2>Codevolution</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+<h2>Hidden</h2>
+</ng-template>
+
   `,
   styleUrls: ['./test.component.css']
 })
