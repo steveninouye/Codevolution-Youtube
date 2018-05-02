@@ -4,14 +4,14 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-test',
   template: `
 
-<h2>{{"Hello " + parentData}}
+<h2>{{"Hello " + name}}
 </h2>
 
   `,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  @Input() public parentData;
+  @Input('parentData') public name;
 
   constructor() {}
 
