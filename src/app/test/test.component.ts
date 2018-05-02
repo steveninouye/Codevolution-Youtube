@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
 
-<div *ngFor="let color of colors; last as f">
-  <h2>{{f}} {{color}}</h2>
+<div *ngFor="let color of colors; odd as o">
+  <h2>{{o}} {{color}}</h2>
 </div>
 
   `,
